@@ -3,7 +3,7 @@ import sys
 
 install_reqs = [
     "decorator>=3.3.2",
-    "requests>=0.8.8",
+    "requests>=2.6.0",
 ]
 if sys.version_info[0] == 2:
     # simplejson is not python3 compatible
@@ -14,7 +14,7 @@ if [sys.version_info[0], sys.version_info[1]] < [2, 7]:
 
 setup(
     name="datadog",
-    version="0.6.0",
+    version="0.7.0",
     install_requires=install_reqs,
     tests_require=["tox", "nose", "mock", "six", "pillow"],
     packages=[
