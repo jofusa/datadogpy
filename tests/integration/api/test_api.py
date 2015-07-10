@@ -753,5 +753,28 @@ class TestDatadog(unittest.TestCase):
 
         dog.Host.unmute(hostname)
 
+    @attr('embed')
+    def test_graph_embed(self):
+        # Initialize a graph definition
+        graph_def = {
+            "viz": "toplist",
+            "requests": [{
+                "q": "top(system.disk.free{*} by {device}, 10, 'mean', 'desc')",
+                "style": {
+                    "palette": "dog_classic"
+                },
+                "conditional_formats": [{
+                    "palette": "red",
+                    "comparator": ">",
+                    "value": 50000000000
+                }, {
+                    "palette": "green",
+                    "comparator": ">",
+                    "value": 30000000000
+                }]
+            }]
+        }
+        graph_def = json.dumps(graph_def)
+
 if __name__ == '__main__':
     unittest.main()
