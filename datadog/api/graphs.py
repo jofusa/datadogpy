@@ -71,6 +71,12 @@ class Embed(ListableAPIResource, GetableAPIResource, ActionAPIResource):
         :param embed_id: embed token
         :type embed_id: string embed token
 
+        :param size: graph size
+        :type size: string graph size
+
+        :param legend: legend flag
+        :type legend: string legend flag
+
         :returns: JSON response from HTTP API request
         """
         return super(Embed, cls).get(embed_id, **params)
