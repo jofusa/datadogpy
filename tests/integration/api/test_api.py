@@ -774,6 +774,9 @@ class TestDatadog(unittest.TestCase):
                 }]
             }]
         }
+        size = "medium"
+        legend = "no"
+
         graph_def = json.dumps(graph_def)
 
 if __name__ == '__main__':

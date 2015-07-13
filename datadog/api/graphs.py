@@ -103,7 +103,7 @@ class Embed(ListableAPIResource, GetableAPIResource, ActionAPIResource):
 
         :returns: JSON response from HTTP API request
         """
-        return super(Graph, cls)._trigger_action('POST', name=cls._class_url, **params)
+        return super(Embed, cls)._trigger_action('POST', name=cls._class_url, **params)
 
     @classmethod
     def enable(cls, embed_id, **params):
