@@ -753,8 +753,15 @@ class TestDatadog(unittest.TestCase):
 
         dog.Host.unmute(hostname)
 
-    @attr('embed')
-    def test_graph_embed(self):
+    def test_get_all_embeds(self):
+        all_embeds = dog.Embed.get_all()
+        print all_embeds
+        pass
+
+    def test_get_embed(self):
+        pass
+
+    def test_create_embed(self):
         # Initialize a graph definition
         graph_def = {
             "viz": "toplist",
@@ -777,7 +784,15 @@ class TestDatadog(unittest.TestCase):
         size = "medium"
         legend = "no"
 
-        graph_def = json.dumps(graph_def)
+        graph_json = json.dumps(graph_def)
+        print graph_json
+        pass
+
+    def test_enable_embed(self):
+        pass
+
+    def test_revoke_embed(self):
+        pass
 
 if __name__ == '__main__':
     unittest.main()
