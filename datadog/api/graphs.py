@@ -77,6 +77,9 @@ class Embed(ListableAPIResource, GetableAPIResource, ActionAPIResource):
         :param legend: legend flag
         :type legend: string legend flag
 
+        :param template_vars: template variable values
+        :type template_vars: string values
+
         :returns: JSON response from HTTP API request
         """
         return super(Embed, cls).get(embed_id, **params)
@@ -98,8 +101,8 @@ class Embed(ListableAPIResource, GetableAPIResource, ActionAPIResource):
         :param legend: legend flag
         :type legend: string legend flag
 
-        :param template_vars: template variable values
-        :type template_vars: string values
+        :param title: graph title
+        :type title: string title
 
         :returns: JSON response from HTTP API request
         """
